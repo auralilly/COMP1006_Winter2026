@@ -8,12 +8,20 @@
 */
 
 $items = ["Home", "About", "Contact"];
-
+include 'head.php';
 ?>
 
 
 
 <h1>Welcome</h1>
 
+<?php
+include 'item.php';
 
+?>
+
+<?php
+
+include 'footer.php';
+?>
 
