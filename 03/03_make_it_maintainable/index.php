@@ -15,15 +15,5 @@ $items = ["Home", "About", "Contact"];
 
 <h1>Welcome</h1>
 
-<ul>
-<?php foreach ($items as $item): ?>
-    <li><?= $item ?></li>
-<?php endforeach; ?>
-</ul>
 
-<footer>
-    <p>&copy; 2026</p>
-</footer>
 
-</body>
-</html>
