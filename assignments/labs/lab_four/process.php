@@ -1,7 +1,7 @@
 <?php
 require "includes/header.php";
 //  TODO: connect to the database 
-
+require "includes/connect.php";
 //   TODO: Grab form data (no validation or sanitization for this lab)
 
 /*
@@ -11,7 +11,13 @@ require "includes/header.php";
   4.
 
 */
-
+$sql = "
+    INSERT INTO subscribers 
+    (first_name, last_name, email)
+    VALUES 
+    (:first_name, :last_name, :email)
+";
+$stmt = $pdo->prepare($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
