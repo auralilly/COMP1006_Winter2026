@@ -3,7 +3,12 @@ require "includes/header.php";
 //  TODO: connect to the database 
 require "includes/connect.php";
 //   TODO: Grab form data (no validation or sanitization for this lab)
-
+$sql = "
+    INSERT INTO subscribers 
+    (first_name, last_name, email)
+    VALUES 
+    (:first_name, :last_name, :email)
+";
 /*
   1. Write an INSERT statement with named placeholders
   2. Prepare the statement
@@ -18,7 +23,15 @@ $sql = "
     (:first_name, :last_name, :email)
 ";
 $stmt = $pdo->prepare($sql);
+
+$stmt->execute([
+    ':first_name' => $firstName,
+    ':last_name'  => $lastName,
+    ':email'      => $email
+]);
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
