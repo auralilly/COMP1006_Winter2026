@@ -10,8 +10,14 @@ require "includes/connect.php";
   4. Execute the statement
   5. Fetch all results into $subscribers
 */
+//step 1 and 2
+$sql = "SELECT * FROM subscribers ORDER BY subscribed_at DESC";
+//step 3
+$stmt = $pdo->prepare($sql);
+//step 4
+$stmt->execute();
 
-$subscribers = []; // placeholder
+
 ?>
 
 <main class="container mt-4">
