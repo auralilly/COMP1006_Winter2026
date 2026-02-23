@@ -16,8 +16,8 @@ $sql = "SELECT * FROM subscribers ORDER BY subscribed_at DESC";
 $stmt = $pdo->prepare($sql);
 //step 4
 $stmt->execute();
-
-
+//step 5
+$subscribers = $stmt->fetchAll();
 ?>
 
 <main class="container mt-4">
